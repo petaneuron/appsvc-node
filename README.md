@@ -1,2 +1,4 @@
 # appsvc-node
-Node Container for Microsoft Azure Web App Service
+Node Image for Microsoft Azure Web App Service
+
+The configs adapt from https://github.com/Azure-App-Service/ImageBuilder
