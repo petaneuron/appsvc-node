@@ -24,6 +24,7 @@ RUN rm -f /etc/ssh/sshd_config
 COPY startup /opt/startup
 COPY hostingstart.html /opt/startup
 COPY startup.sh /opt/startup
+COPY vott /home/site/wwwroot
 
 # configure startup
 RUN mkdir -p /tmp
@@ -48,7 +49,6 @@ ENV WEBSITE_ROLE_INSTANCE_ID localRoleInstance
 ENV WEBSITE_INSTANCE_ID localInstance
 ENV PATH ${PATH}:/home/site/wwwroot
 
-COPY vott/* /home/site/wwwroot/
 WORKDIR /home/site/wwwroot
 
 ENTRYPOINT ["/opt/startup/init_container.sh"]
