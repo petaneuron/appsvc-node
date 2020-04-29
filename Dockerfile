@@ -48,6 +48,7 @@ ENV WEBSITE_ROLE_INSTANCE_ID localRoleInstance
 ENV WEBSITE_INSTANCE_ID localInstance
 ENV PATH ${PATH}:/home/site/wwwroot
 
+COPY vott/* /home/site/wwwroot/
 WORKDIR /home/site/wwwroot
 
 ENTRYPOINT ["/opt/startup/init_container.sh"]
