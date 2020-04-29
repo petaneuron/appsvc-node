@@ -23,6 +23,7 @@ RUN mkdir -p /home/LogFiles /opt/startup \
 RUN rm -f /etc/ssh/sshd_config
 COPY startup /opt/startup
 COPY hostingstart.html /opt/startup
+COPY startup.sh /opt/startup
 
 # configure startup
 RUN mkdir -p /tmp
